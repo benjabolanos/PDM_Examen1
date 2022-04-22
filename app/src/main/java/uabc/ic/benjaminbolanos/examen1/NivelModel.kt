@@ -10,9 +10,9 @@ class NivelModel(
     var cantidadValores = 0
     val serie = Serie()
     var inicioSerie = 0
-    lateinit var valores: ArrayList<Int>
+    lateinit var valores: ArrayList<String>
     lateinit var posicionIncognitas: ArrayList<Int>
-    lateinit var posiblesRespuestas: ArrayList<Int>
+    lateinit var posiblesRespuestas: ArrayList<String>
 
     init {
         crearNivel()

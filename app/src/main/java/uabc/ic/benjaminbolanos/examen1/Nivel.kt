@@ -10,6 +10,13 @@ import android.widget.Toast
 
 class Nivel : AppCompatActivity() {
 
+    /**
+     * COSAS POR HACER
+     * 1. Valores no repetidos en posicionesIncognitas
+     * 2.
+     */
+
+
     //NivelModelo
     private lateinit var nivelModel: NivelModel
 
@@ -36,7 +43,7 @@ class Nivel : AppCompatActivity() {
     private fun setLevel(){
         nivelModel = NivelModel(dificultad)
         for((i,tv) in valoresViews.withIndex()){
-            tv.text = nivelModel.valores[i].toString()
+            tv.text = nivelModel.valores[i]
         }
         for(i in nivelModel.posicionIncognitas){
             valoresViews[i].text = "__"
@@ -91,7 +98,6 @@ class Nivel : AppCompatActivity() {
                 historialNiveles.add(nivelModel)
                 dificultad++
                 setLevel()
-                Log.i("QPALV","Nivel $dificultad")
             } else {
                 Toast.makeText(applicationContext, "Fin del juego", Toast.LENGTH_SHORT).show()
             }
@@ -104,7 +110,7 @@ class Nivel : AppCompatActivity() {
         for(i in 0 until valoresViews.size){
             if(valoresViews[i].text == "__")
                 return false
-            if(valoresViews[i].text.toString().toInt() != nivelModel.valores[i])
+            if(valoresViews[i].text.toString() != nivelModel.valores[i])
                 return false
         }
         return true
