@@ -1,10 +1,11 @@
 package uabc.ic.benjaminbolanos.examen1
 
+import android.util.Log
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Serie {
-    private var valores: ArrayList<String>
+class Serie(val dificultad:Int) {
+    var valores: ArrayList<String>
     var esAlfabetica: Boolean = false
     var tamaño: Int = 0
 
@@ -13,30 +14,50 @@ class Serie {
         tamaño = valores.size
     }
 
-    fun getValores(cantidadValores:Int, inicio:Int): ArrayList<String> {
-        val vals = valores
-        return vals.slice(inicio until inicio+cantidadValores) as ArrayList<String>
-    }
-
     fun getValorRandom(): String{
         val r = Random()
         return valores[r.nextInt(valores.size)]
     }
 
     private fun getSerieRandom(): ArrayList<String>{
-        return when(Random().nextInt(11)){
-            0 -> fibonacci()
-            1 -> minusculas()
-            2 -> mayusculas()
-            3 -> numeros()
-            4 -> tablaDel(2, 200)
-            5 -> tablaDel(3, 240)
-            6 -> tablaDel(4, 320)
-            7 -> tablaDel(5, 500)
-            8 -> tablaDel(10, 500)
-            9 -> primos()
-            10-> cuadrados()
-            else -> ArrayList()
+        val opcion = Random().nextInt(3)
+        return when(dificultad){
+            0 -> {
+                when(opcion){
+                    0 -> minusculas()
+                    1 -> tablaDel(2, 200)
+                    2 -> numeros()
+                    else -> getSerieRandom()
+                }
+            }
+            1 -> {
+                when(opcion){
+                    0 -> mayusculas()
+                    1 -> tablaDel(5, 500)
+                    2 -> tablaDel(10, 200)
+                    else -> getSerieRandom()
+                }
+            }
+            2 -> {
+                when(opcion){
+                    0 -> tablaDel(3, 240)
+                    1 -> tablaDel(4, 320)
+                    2 -> tablaDel(5, 500)
+                    else -> getSerieRandom()
+                }
+            }
+            3 -> {
+                when(opcion){
+                    0 -> fibonacci()
+                    1 -> primos()
+                    2 -> cuadrados()
+                    else -> getSerieRandom()
+                }
+            }
+            else -> {
+                Log.i("QPALV", "Dificultad inexistente.")
+                ArrayList()
+            }
         }
     }
 
@@ -45,7 +66,7 @@ class Serie {
         var n2 = 1
         val array = ArrayList<String>()
         array.add(n1.toString())
-        for(i in 1..29){
+        for(i in 1..15){
             array.add(n2.toString())
             val aux = n1+n2
             n1 = n2
@@ -103,7 +124,7 @@ class Serie {
 
     private fun cuadrados(): ArrayList<String>{
         val array = ArrayList<String>()
-        for(i in numeros()){
+        for(i in numeros().subList(0, numeros().size/2)){
             val n = i.toInt()
             array.add(n.times(n).toString())
         }

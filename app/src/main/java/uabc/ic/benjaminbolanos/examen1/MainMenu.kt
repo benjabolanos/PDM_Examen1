@@ -12,7 +12,7 @@ class MainMenu : AppCompatActivity() {
     }
 
     fun goToLevel(view: View){
-        val intent = Intent(this, Nivel::class.java)
+        val intent = Intent(this, Juego::class.java)
         startActivity(intent)
     }
 }

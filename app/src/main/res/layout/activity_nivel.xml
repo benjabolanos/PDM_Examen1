@@ -4,14 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Nivel">
+    android:background="@color/fondo"
+    tools:context=".Juego">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/fondo_secundario"
+        android:columnCount="6"
+        android:rowCount="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+
+        <TextView
+            android:id="@+id/nivel_valores_0"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/nivel_valores_1"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/nivel_valores_2"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/nivel_valores_3"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/nivel_valores_4"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/nivel_valores_5"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </GridLayout>
 
     <TextView
         android:id="@+id/nivel_respuesta_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
         android:text="@string/number_holder"
         android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
         android:textSize="35sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,10 +145,13 @@
 
     <TextView
         android:id="@+id/nivel_respuesta_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
         android:text="@string/number_holder"
         android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
         android:textSize="35sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,10 +163,13 @@
 
     <TextView
         android:id="@+id/nivel_respuesta_0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
         android:text="@string/number_holder"
         android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
         android:textSize="35sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,106 +179,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.641" />
 
-    <TextView
-        android:id="@+id/nivel_valores_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/number_holder"
-        android:textAlignment="center"
-        android:textSize="45sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.925"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
-
-    <TextView
-        android:id="@+id/nivel_valores_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/number_holder"
-        android:textAlignment="center"
-        android:textSize="45sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
-
-    <TextView
-        android:id="@+id/nivel_valores_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/number_holder"
-        android:textAlignment="center"
-        android:textSize="45sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.754"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
-
-    <TextView
-        android:id="@+id/nivel_valores_0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/number_holder"
-        android:textAlignment="center"
-        android:textSize="45sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
-
-    <TextView
-        android:id="@+id/nivel_valores_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/number_holder"
-        android:textAlignment="center"
-        android:textSize="45sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.573"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
-
-    <TextView
-        android:id="@+id/nivel_valores_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/number_holder"
-        android:textAlignment="center"
-        android:textSize="45sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.234"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
 
     <Button
         android:id="@+id/nivel_siguiente_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="siguienteNivel"
-        android:text="Siguiente"
+        android:text="@string/siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.824" />
+
+    <TextView
+        android:id="@+id/game_screen_title"
+        android:layout_width="311dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="32dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/game_view_title"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/titulo"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
