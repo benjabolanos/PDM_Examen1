@@ -10,17 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Examen1">
         <activity
-            android:name=".MainMenu"
+            android:name=".Juego"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Juego"
-            android:exported="false" />
     </application>
 
 </manifest>

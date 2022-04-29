@@ -5,9 +5,9 @@ import kotlin.random.Random
 class Nivel(
     val dificultad: Int)
 {
-    var cantidadIncognitas:Int = 0
-    var cantidadValores = 0
-    val serie = Serie(dificultad)
+    private var cantidadIncognitas:Int = 0
+    private var cantidadValores = 0
+    private val serie = Serie(dificultad)
     lateinit var valores: ArrayList<String>
     lateinit var posicionIncognitas: ArrayList<Int>
     lateinit var posiblesRespuestas: ArrayList<String>
@@ -44,7 +44,9 @@ class Nivel(
 
     private fun crearRespuesta(){
         posiblesRespuestas = ArrayList()
-        valores = serie.valores.slice(0..cantidadValores) as ArrayList<String>
+        val inicioSerie = Random.nextInt(0, serie.tamaño - cantidadValores - 1)
+
+        valores = serie.valores.slice(inicioSerie..(inicioSerie + cantidadValores)) as ArrayList<String>
 
         posicionIncognitas = ArrayList((0 until cantidadValores).shuffled().take(cantidadIncognitas))
 

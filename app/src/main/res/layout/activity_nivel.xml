@@ -7,7 +7,81 @@
     android:background="@color/fondo"
     tools:context=".Juego">
 
+
+    <TextView
+        android:id="@+id/juego_nivel2_respuesta2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/number_holder"
+        android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
+        android:textSize="35sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toEndOf="@+id/juego_nivel2_respuesta1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <TextView
+        android:id="@+id/juego_nivel0_respuesta0"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/number_holder"
+        android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
+        android:textSize="35sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/juego_nivel0_respuesta1"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.309" />
+
+    <TextView
+        android:id="@+id/juego_nivel1_respuesta1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/number_holder"
+        android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
+        android:textSize="35sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.569" />
+
+    <TextView
+        android:id="@+id/juego_nivel1_respuesta0"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/number_holder"
+        android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
+        android:textSize="35sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/juego_nivel1_respuesta1"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.569" />
+
     <GridLayout
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/fondo_secundario"
@@ -15,12 +89,13 @@
         android:rowCount="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4">
+        app:layout_constraintVertical_bias="0.711">
 
         <TextView
-            android:id="@+id/nivel_valores_0"
+            android:id="@+id/juego_nivel2_valor0"
             android:layout_width="63dp"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
@@ -37,7 +112,7 @@
             android:visibility="visible" />
 
         <TextView
-            android:id="@+id/nivel_valores_1"
+            android:id="@+id/juego_nivel2_valor1"
             android:layout_width="63dp"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
@@ -54,7 +129,7 @@
             android:visibility="visible" />
 
         <TextView
-            android:id="@+id/nivel_valores_2"
+            android:id="@+id/juego_nivel2_valor2"
             android:layout_width="63dp"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
@@ -71,7 +146,7 @@
             android:visibility="visible" />
 
         <TextView
-            android:id="@+id/nivel_valores_3"
+            android:id="@+id/juego_nivel2_valor3"
             android:layout_width="63dp"
             android:layout_height="60dp"
             android:layout_row="0"
@@ -90,7 +165,7 @@
             android:visibility="visible" />
 
         <TextView
-            android:id="@+id/nivel_valores_4"
+            android:id="@+id/juego_nivel2_valor4"
             android:layout_width="63dp"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
@@ -107,7 +182,7 @@
             android:visibility="visible" />
 
         <TextView
-            android:id="@+id/nivel_valores_5"
+            android:id="@+id/juego_nivel2_valor5"
             android:layout_width="63dp"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
@@ -126,7 +201,7 @@
     </GridLayout>
 
     <TextView
-        android:id="@+id/nivel_respuesta_2"
+        android:id="@+id/juego_nivel2_respuesta1"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:autoSizeTextType="uniform"
@@ -138,65 +213,289 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.582"
-        app:layout_constraintStart_toEndOf="@+id/nivel_respuesta_1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.641" />
-
-    <TextView
-        android:id="@+id/nivel_respuesta_1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:autoSizeTextType="uniform"
-        android:fontFamily="@font/aclonica"
-        android:text="@string/number_holder"
-        android:textAlignment="center"
-        android:textColor="@color/texto_secundario"
-        android:textSize="35sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.641" />
+        app:layout_constraintVertical_bias="0.83" />
 
-    <TextView
-        android:id="@+id/nivel_respuesta_0"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:autoSizeTextType="uniform"
-        android:fontFamily="@font/aclonica"
-        android:text="@string/number_holder"
-        android:textAlignment="center"
-        android:textColor="@color/texto_secundario"
-        android:textSize="35sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nivel_respuesta_1"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.641" />
-
-
-    <Button
-        android:id="@+id/nivel_siguiente_button"
+    <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="siguienteNivel"
-        android:text="@string/siguiente"
+        android:background="@color/fondo_secundario"
+        android:columnCount="6"
+        android:rowCount="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.824" />
+        app:layout_constraintVertical_bias="0.17">
+
+        <TextView
+            android:id="@+id/juego_nivel0_valor0"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/juego_nivel0_valor1"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/juego_nivel0_valor2"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/juego_nivel0_valor3"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/juego_nivel0_valor4"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/juego_nivel0_valor5"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/juego_nivel0_respuesta1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/number_holder"
+        android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
+        android:textSize="35sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.309" />
+
+    <TextView
+        android:id="@+id/juego_nivel0_respuesta2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/number_holder"
+        android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
+        android:textSize="35sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toEndOf="@+id/juego_nivel0_respuesta1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.309" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/fondo_secundario"
+        android:columnCount="6"
+        android:rowCount="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44">
+
+        <TextView
+            android:id="@+id/juego_nivel1_valor0"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/juego_nivel1_valor1"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/juego_nivel1_valor2"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/juego_nivel1_valor3"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/juego_nivel1_valor4"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/juego_nivel1_valor5"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="10dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/number_holder"
+            android:textAlignment="center"
+            android:textColor="@color/texto"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </GridLayout>
 
     <TextView
         android:id="@+id/game_screen_title"
-        android:layout_width="311dp"
-        android:layout_height="142dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="382dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="16dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="@font/aclonica"
         android:text="@string/game_view_title"
@@ -205,8 +504,73 @@
         android:textColor="@color/titulo"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/juego_nivel1_respuesta2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/number_holder"
+        android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
+        android:textSize="35sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toEndOf="@+id/juego_nivel1_respuesta1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.569" />
+
+    <TextView
+        android:id="@+id/juego_nivel2_respuesta0"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/number_holder"
+        android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
+        android:textSize="35sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/juego_nivel2_respuesta1"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+
+    <Button
+        android:id="@+id/nivel_siguiente_button"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:onClick="siguienteTurno"
+        android:text="@string/siguiente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
+        android:layout_marginStart="50dp"/>
+
+    <Button
+        android:id="@+id/juego_reiniciar_boton"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:text="Reiniciar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
+        android:layout_marginEnd="50dp"
+        android:onClick="setLevel"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

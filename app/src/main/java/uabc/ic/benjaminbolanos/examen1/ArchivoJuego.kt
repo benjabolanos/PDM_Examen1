@@ -1,16 +1,15 @@
 package uabc.ic.benjaminbolanos.examen1
 
 import android.content.Context
-import java.io.FileOutputStream
-import java.io.OutputStreamWriter
+import java.io.*
 import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class ArchivoJuego {
+class ArchivoJuego(val contexto: Context) {
 
-    private lateinit var nombreArchivo: String
+    private lateinit var archivo: File
 
     init {
         crearNombreArchivo()
@@ -18,30 +17,33 @@ class ArchivoJuego {
 
     private fun crearNombreArchivo(){
         val date = Calendar.getInstance().time
-        val formatter = SimpleDateFormat("yyyy_MM_dd_HH:mm", Locale.getDefault())
-        nombreArchivo = "niveles_examen1_${formatter.format(date)}.txt"
+        val formatter = SimpleDateFormat("yyyy_MM_dd_HH_mm", Locale.getDefault())
+        val nombreArchivo = "niveles_examen1_${formatter.format(date)}.txt"
+
+        val path = contexto.filesDir
+        val examenDir = File(path, "Examen1")
+        examenDir.mkdir()
+        archivo = File(examenDir, nombreArchivo)
     }
 
-    fun guardarInfoNiveles(context: Context, niveles: ArrayList<Nivel>, turno:Int){
+    fun guardarInfoNiveles(context: Context, niveles: ArrayList<Nivel>, turno:Int, tiempoRestante: Double){
         try{
-            val fileOutPutStream: FileOutputStream = context.openFileOutput(nombreArchivo,
-                Context.MODE_APPEND or Context.MODE_PRIVATE)
-            val outputWriter = OutputStreamWriter(fileOutPutStream)
-            outputWriter.append(formatInfoNiveles(niveles, turno))
+            val fileWriter = FileWriter(archivo, true)
+            val bufferedWriter = BufferedWriter(fileWriter)
+            bufferedWriter.write(formatInfoNiveles(niveles, turno, tiempoRestante))
+            bufferedWriter.close()
         } catch (e: Exception){
             e.printStackTrace()
         }
     }
 
-    private fun formatInfoNiveles(niveles: ArrayList<Nivel>, turno: Int, segundosRestantes: Int): String{
-        var info = String()
-
-        info += "TURNO $turno DIFICULTAD ${niveles[0].dificultad}"
+    private fun formatInfoNiveles(niveles: ArrayList<Nivel>, turno: Int, segundosRestantes: Double): String{
+        var info = "TURNO $turno DIFICULTAD ${niveles[0].dificultad} TIEMPO: ${String.format("%.2f",segundosRestantes)}s\n"
 
         for((i,niv) in niveles.withIndex()){
-            info += "Nivel $i - Valores: ${niv.valores} - Tiempo restante: ${segundosRestantes}s\n"
+            info += "Nivel $i - Valores: ${niv.valores}\n"
         }
-        info += "\n------------------------"
+        info += "\n------------------------\n\n"
         return info
     }
 
