@@ -7,7 +7,7 @@ class JuegoModel(context: Context) {
     private var dificultad: Int = 0
     private var turnos: Int = 1
 
-    private var archivoJuego = ArchivoJuego(context)
+    var archivoJuego = ArchivoJuego(context)
     var cronometro = Cronometro()
 
     init {

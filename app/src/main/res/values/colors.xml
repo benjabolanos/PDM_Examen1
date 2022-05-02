@@ -8,9 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="respuestas_selected">#ffe000</color>
-    <color name="texto">#cfbe54</color>
-    <color name="titulo">#00656e</color>
-    <color name="fondo">#e8c3a8</color>
-    <color name="fondo_secundario">#7ca3a0</color>
-    <color name="texto_secundario">#456a30</color>
+    <color name="texto">#FFFFFFFF</color>
+    <color name="titulo">#E1DBE4</color>
+    <color name="fondo">#4E0D3A</color>
+    <color name="fondo_secundario">#720D5D</color>
+    <color name="texto_secundario">#ffe000</color>
 </resources>

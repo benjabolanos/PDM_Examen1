@@ -9,7 +9,7 @@ import kotlin.collections.ArrayList
 
 class ArchivoJuego(val contexto: Context) {
 
-    private lateinit var archivo: File
+    lateinit var archivo: File
 
     init {
         crearNombreArchivo()

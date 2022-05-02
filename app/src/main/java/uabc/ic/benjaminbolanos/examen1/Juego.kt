@@ -1,6 +1,7 @@
 package uabc.ic.benjaminbolanos.examen1
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -116,5 +117,11 @@ class Juego : AppCompatActivity() {
             }
         }
         return juegoModel.verificarSeries(serieAVerificar)
+    }
+
+    fun visualizarArchivo(view: View){
+        val intent = Intent(this, Resultados::class.java)
+        intent.putExtra("Archivo",juegoModel.archivoJuego.archivo)
+        startActivity(intent)
     }
 }

@@ -549,28 +549,42 @@
         android:id="@+id/nivel_siguiente_button"
         android:layout_width="130dp"
         android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="@color/fondo_secundario"
         android:onClick="siguienteTurno"
         android:text="@string/siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97"
-        android:layout_marginStart="50dp"/>
+        app:layout_constraintVertical_bias="0.97" />
 
     <Button
         android:id="@+id/juego_reiniciar_boton"
         android:layout_width="130dp"
         android:layout_height="55dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/fondo_secundario"
+        android:onClick="setLevel"
         android:text="Reiniciar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97"
-        android:layout_marginEnd="50dp"
-        android:onClick="setLevel"/>
+        app:layout_constraintVertical_bias="0.97" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:onClick="visualizarArchivo"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
