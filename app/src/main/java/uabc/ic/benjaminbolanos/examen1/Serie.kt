@@ -112,21 +112,24 @@ class Serie(val dificultad:Int) {
     private fun primos(): ArrayList<String>{
         val array = ArrayList<String>()
         for(i in 1..300){
+            var esPrimo = true
             if(i == (0 or 1 or 4))
-                continue
-            for(j in 2..(i/2))
-                if(i%j == 0)
-                    continue
-            array.add(i.toString())
+                esPrimo = false
+            for(j in 2..(i/2)) {
+                if (i % j == 0) {
+                    esPrimo = false
+                    break
+                }
+            }
+            if(esPrimo) array.add(i.toString())
         }
         return array
     }
 
     private fun cuadrados(): ArrayList<String>{
         val array = ArrayList<String>()
-        for(i in numeros().subList(0, numeros().size/2)){
-            val n = i.toInt()
-            array.add(n.times(n).toString())
+        for(i in 1 until 32){
+            array.add(i.times(i).toString())
         }
         return array
     }

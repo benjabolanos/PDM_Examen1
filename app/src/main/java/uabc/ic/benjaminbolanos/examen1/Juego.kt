@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import kotlin.math.floor
@@ -29,11 +30,11 @@ class Juego : AppCompatActivity() {
         initView()
         setValoresOnClickListeners()
         setRespuestasOnClickListeners()
-        setLevel(null)
+        setLevel()
     }
 
     @SuppressLint("SetTextI18n")
-    fun setLevel(view: View?){
+    fun setLevel(){
         for((i,tv) in valoresViews.withIndex()){
             tv.text = juegoModel.niveles[floor((i.toDouble()/6)).toInt()].valores[i%6]
         }
@@ -65,6 +66,10 @@ class Juego : AppCompatActivity() {
             R.id.juego_nivel2_respuesta0, R.id.juego_nivel2_respuesta1, R.id.juego_nivel2_respuesta2)
         for(id in respuestasIDs){
             respuestasViews.add(findViewById(id))
+        }
+
+        findViewById<Button>(R.id.juego_reiniciar_boton).setOnClickListener {
+            setLevel()
         }
     }
 
@@ -99,8 +104,9 @@ class Juego : AppCompatActivity() {
     fun siguienteTurno(view: View){
         if(checarGanador()) {
             if(juegoModel.avanzarTurno(this)) {
-                setLevel(null)
+                setLevel()
             } else {
+                visualizarArchivo(view)
                 Toast.makeText(applicationContext, "Fin del juego", Toast.LENGTH_SHORT).show()
             }
         } else {

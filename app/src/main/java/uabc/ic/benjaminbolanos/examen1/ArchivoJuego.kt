@@ -43,7 +43,7 @@ class ArchivoJuego(val contexto: Context) {
         for((i,niv) in niveles.withIndex()){
             info += "Nivel $i - Valores: ${niv.valores}\n"
         }
-        info += "\n------------------------\n\n"
+        info += "\n--------------------------------------------------------------------------\n\n"
         return info
     }
 
