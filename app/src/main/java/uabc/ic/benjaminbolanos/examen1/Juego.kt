@@ -1,10 +1,8 @@
 package uabc.ic.benjaminbolanos.examen1
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -33,7 +31,10 @@ class Juego : AppCompatActivity() {
         setLevel()
     }
 
-    @SuppressLint("SetTextI18n")
+    /**
+     * Función para tomar los valores de los niveles y mostrarlos en los diferentes Views de
+     * la actividad.
+     */
     fun setLevel(){
         for((i,tv) in valoresViews.withIndex()){
             tv.text = juegoModel.niveles[floor((i.toDouble()/6)).toInt()].valores[i%6]
@@ -50,6 +51,10 @@ class Juego : AppCompatActivity() {
         }
     }
 
+    /**
+     * Función para guardar las views de los valores y respuestas en arrays para acceder a ellos
+     * de manera fácil.
+     */
     private fun initView(){
         val valoresIDs = arrayOf(R.id.juego_nivel0_valor0, R.id.juego_nivel0_valor1, R.id.juego_nivel0_valor2,
             R.id.juego_nivel0_valor3, R.id.juego_nivel0_valor4, R.id.juego_nivel0_valor5,
@@ -73,6 +78,9 @@ class Juego : AppCompatActivity() {
         }
     }
 
+    /**
+     * Función que crea los ClickListeners para los textviews de las respuestas.
+     */
     private fun setRespuestasOnClickListeners(){
         for((i,tv) in respuestasViews.withIndex()){
             tv.setOnClickListener {
@@ -87,6 +95,9 @@ class Juego : AppCompatActivity() {
         }
     }
 
+    /**
+     * Función que crea los ClickListeners para los textviews de los valores.
+     */
     private fun setValoresOnClickListeners(){
         for((i,tv) in valoresViews.withIndex()){
             tv.setOnClickListener {
@@ -101,19 +112,28 @@ class Juego : AppCompatActivity() {
         }
     }
 
+    /**
+     * Función para avanzar al siguiente turno, debe haber ganador para que pueda avanzar.
+     * Si llega al final del juego, muestra los resultados.
+     */
     fun siguienteTurno(view: View){
         if(checarGanador()) {
-            if(juegoModel.avanzarTurno(this)) {
+            if(juegoModel.avanzarTurno()) {
                 setLevel()
             } else {
                 visualizarArchivo(view)
                 Toast.makeText(applicationContext, "Fin del juego", Toast.LENGTH_SHORT).show()
             }
         } else {
-            Toast.makeText(applicationContext, "Nel pa", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Respuestas incorrectas", Toast.LENGTH_SHORT).show()
         }
     }
 
+    /**
+     * Función para checar si los tres niveles están correctos, en ese caso se dice que si hay
+     * ganador y retorna true.
+     * @return True si las tres series están correctas.
+     */
     fun checarGanador(): Boolean{
         val serieAVerificar = Array<ArrayList<String>>(3){ArrayList()}
         var index = 0
@@ -125,6 +145,10 @@ class Juego : AppCompatActivity() {
         return juegoModel.verificarSeries(serieAVerificar)
     }
 
+    /**
+     * Función para ir a la Actividad de resultados y mandar el archivo de juego actual para
+     * mostrarlo.
+     */
     fun visualizarArchivo(view: View){
         val intent = Intent(this, Resultados::class.java)
         intent.putExtra("Archivo",juegoModel.archivoJuego.archivo)

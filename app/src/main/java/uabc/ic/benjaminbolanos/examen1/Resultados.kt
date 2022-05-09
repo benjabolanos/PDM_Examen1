@@ -9,6 +9,10 @@ import java.io.File
 import java.io.FileReader
 import java.lang.Exception
 
+/**
+ * Actividad Resultados que recibe un archivo con los resultados de los niveles y muestra el
+ * contenido
+ */
 class Resultados : AppCompatActivity() {
 
     lateinit var archivo: File
@@ -20,6 +24,9 @@ class Resultados : AppCompatActivity() {
         mostrarTexto()
     }
 
+    /**
+     * Función que lee el archivo que recibe del intent.
+     */
     fun leerArchivo(){
         val datos = intent.extras
         if(datos != null){
@@ -27,6 +34,9 @@ class Resultados : AppCompatActivity() {
         }
     }
 
+    /**
+     * Función para leer el archivo y mostrar su contenido.
+     */
     fun mostrarTexto(){
         try {
             val tv = findViewById<TextView>(R.id.resultados_archivo_text)

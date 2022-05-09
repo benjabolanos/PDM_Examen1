@@ -7,14 +7,24 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
+/**
+ * Clase ArchivoJuego que controla el archivo donde se guardarán los resultados de la partida actual.
+ */
 class ArchivoJuego(val contexto: Context) {
 
     lateinit var archivo: File
 
+    /**
+     * Al iniciar se manda a crear el nombre del archivo.
+     */
     init {
         crearNombreArchivo()
     }
 
+    /**
+     * Función para generar el nombre del archivo acorde al tiempo actual. Despues, genera ese
+     * archivo en un directorio llamado Examen1.
+     */
     private fun crearNombreArchivo(){
         val date = Calendar.getInstance().time
         val formatter = SimpleDateFormat("yyyy_MM_dd_HH_mm", Locale.getDefault())
@@ -26,7 +36,10 @@ class ArchivoJuego(val contexto: Context) {
         archivo = File(examenDir, nombreArchivo)
     }
 
-    fun guardarInfoNiveles(context: Context, niveles: ArrayList<Nivel>, turno:Int, tiempoRestante: Double){
+    /**
+     * Función que recibe los datos de un turno y guarda la información en el archivo.
+     */
+    fun guardarInfoNiveles(niveles: ArrayList<Nivel>, turno:Int, tiempoRestante: Double){
         try{
             val fileWriter = FileWriter(archivo, true)
             val bufferedWriter = BufferedWriter(fileWriter)
@@ -37,6 +50,10 @@ class ArchivoJuego(val contexto: Context) {
         }
     }
 
+    /**
+     * Función que le da formato a los datos de un turno y lo retorna en forma de String.
+     * @return String con la info de los niveles.
+     */
     private fun formatInfoNiveles(niveles: ArrayList<Nivel>, turno: Int, segundosRestantes: Double): String{
         var info = "TURNO $turno DIFICULTAD ${niveles[0].dificultad} TIEMPO: ${String.format("%.2f",segundosRestantes)}s\n"
 
@@ -46,6 +63,4 @@ class ArchivoJuego(val contexto: Context) {
         info += "\n--------------------------------------------------------------------------\n\n"
         return info
     }
-
-
 }
